@@ -23,6 +23,8 @@ const PromptCardList = ({data,handleTagClick }) => {
 
 const Feed = () => {
   
+  
+
   const [seacrhtext, setSeacrhtext] = useState('');
   const [seacrhTimeout, setseacrhTimeout] =  useState(null);
   const [searchResults, setsearchResults] =  useState([]);
@@ -42,7 +44,7 @@ const Feed = () => {
 
   const filterPrompts = (seacrhtext) => {
     const regex = new RegExp(seacrhtext, "i"); // "i" flag for case-insensitive search
-    return allpost.filter(
+    return posts.filter(
       (item) => 
         regex.test(item.creator.username) ||
         regex.test(item.prompt) ||
@@ -83,11 +85,18 @@ const Feed = () => {
               required
               className='search_input peer'
             />
-            
-            <PromptCardList  
-              data={posts}
-              handleTagClick={handleTagClick}
-            />
+
+             {/* All Prompts */}
+              {seacrhtext ? (
+                <PromptCardList
+                  data={searchResults}
+                  handleTagClick={handleTagClick}
+                />
+              ) : (
+                <PromptCardList data={posts} handleTagClick={handleTagClick} />
+              )}
+
+           
           </form>
       </section>
 
