@@ -7,7 +7,7 @@ const Home = () => {
           Discover & share
           <br className="max-md:hidden" />
           <span className="orange_gradient text-center"> 
-          Simple life motivational quotes
+           {" "} Simple life motivational quotes
           </span>
         </h1>
         <p className="desc text-center">               
