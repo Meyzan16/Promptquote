@@ -28,13 +28,14 @@ const Nav = () => {
   return (
     <nav className='flex-between w-full mb-16 pt-3'>
       <Link href='/' className='flex gap-2 flex-center'>
-        <Image 
-          src="/assets/images/logo.svg" alt="profile" width={30} height={30}
-          className='object-contain'
-        />
-        <p className='logo_text'>
-          Protompia
-        </p>
+          <span className="w-[35px] h-[35px]  bg-gradient-to-r
+                            from-amber-500 via-orange-600 to-yellow-500 text-white text-lg font-[500] 
+                            rounded-full flex items-center justify-center">M</span>
+                    
+                    <p className='logo_text'>
+                    Promqoute
+                </p>
+        
       </Link>
 
       {/* desktop navigation */}

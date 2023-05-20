@@ -8,7 +8,7 @@ import PromptCard from './PromptCard';
 
 const PromptCardList = ({data,handleTagClick }) => {
   return (
-    <div className='w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='space-y-6 sm:columns-2 sm:gap-3 xl:columns-3'>
       {
         data.map((post) => (
           <PromptCard 
@@ -22,8 +22,7 @@ const PromptCardList = ({data,handleTagClick }) => {
 }
 
 const Feed = () => {
-  
-  
+
 
   const [seacrhtext, setSeacrhtext] = useState('');
   const [seacrhTimeout, setseacrhTimeout] =  useState(null);
@@ -83,18 +82,20 @@ const Feed = () => {
               value={seacrhtext}
               onChange={handleSearchChange}
               required
-              className='search_input peer'
+              className='search_input mb-8 peer'
             />
 
              {/* All Prompts */}
-              {seacrhtext ? (
-                <PromptCardList
+             {
+                seacrhtext ? (
+                  <PromptCardList
                   data={searchResults}
                   handleTagClick={handleTagClick}
-                />
-              ) : (
-                <PromptCardList data={posts} handleTagClick={handleTagClick} />
-              )}
+                  />
+                  ) : (
+                    <PromptCardList data={posts} handleTagClick={handleTagClick} />
+                )
+            }
 
            
           </form>

@@ -11,7 +11,7 @@ const Profile = ({name, desc, data, handleEdit, handleDelete }) => {
         </h1>
         <p className='desc text-left'>{desc}</p>
 
-        <div className='w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='w-full mt-12 space-y-6 sm:columns-2 sm:gap-3 xl:columns-3'>
           {
             data.map((post) => (
               <PromptCard 

@@ -33,7 +33,7 @@ const Form = ({type, post, setPost, submit, handleSubmit }) => {
                 <span className='font-satoshi font-semibold text-base text-gray-700'>
                   Tag {` `}
                   <span className='font-normal'>
-                    (#product, #webdevelopment, #idea)
+                    (product, webdevelopment, idea and others )
                   </span>
                 </span>
     
@@ -50,7 +50,7 @@ const Form = ({type, post, setPost, submit, handleSubmit }) => {
                       cancel
                   </Link>
 
-                  <button type='submit' disabled={submit} className='px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white'>
+                  <button type='submit' disabled={submit} className='px-5 py-1.5 text-sm bg-primaryorange rounded-full text-white'>
                       {
                         submit ? `${type}...` : type
                       }

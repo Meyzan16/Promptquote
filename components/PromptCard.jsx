@@ -30,8 +30,7 @@ const PromptCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
 
 
   return (
-      <div className='flex-1 mt-12 bg-clip-padding rounded-lg border
-       border-gray-300 bg-white/20 py-4 px-6 md:px-4 backdrop-blur-lg backdrop-filter '>
+      <div className='prompt_card'>
         
         <div className='flex justify-between items-start gap-5'>
           <div className='flex justify-start items-center  cursor-pointer gap-4 md:gap-2' onClick={handleProfileClick}>
